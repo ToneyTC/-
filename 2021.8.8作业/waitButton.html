@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="wait">等待</button>
+    <script>
+        let a =0
+        wait.onclick = function add() {
+             console.log('请等待3s'); 
+        a++
+        console.log(a); 
+            wait.onclick = null;
+            clearTimeout(timer);
+            var timer = setTimeout(function () {
+                wait.onclick = add;
+            }, 3000);
+        }
+
+        // let a = 0
+        // wait.onclick = (function () {
+        //     var last = Date.now();
+        //     return function () {
+        //         var now = Date.now();
+        //         if ((now - last) > 1000) {
+        //             // wait.innerHTML= Number(wait.innerHTML) + 1;   
+        //             console.log('请等待1s');
+        //             a++
+        //             console.log(a);
+        //         }
+        //         last = now;
+        //     }
+        // })();
+    </script>
+</body>
+
+</html>
